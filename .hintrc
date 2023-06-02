@@ -14,7 +14,8 @@
       "default",
       {
         "ignore": [
-          "accent-color"
+          "accent-color",
+          "width: fit-content"
         ]
       }
     ]
