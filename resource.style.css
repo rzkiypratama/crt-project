@@ -7,13 +7,20 @@
 body {
   font-family: "Poppins", sans-serif;
   color: #4a4a44;
-  padding: 30px;
+  padding: 30px 40px;
+  max-width: max-content;
+  margin: auto;
 }
 
+/* title */
 .title {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.title h1 {
+font-size: 3rem;
 }
 
 input.search {
@@ -25,8 +32,9 @@ input.search {
     url("/assets/search-icon.svg") no-repeat 13px;
 }
 
+/* subtitle */
 .subtitle {
-  width: 55%;
+  width: 65%;
   border-left: 5px solid salmon;
   font-size: 30px;
   font-weight: 700;
@@ -39,17 +47,19 @@ input.search {
   margin-left: 15px;
 }
 
+/* aside menu */
 .content-container {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .aside-menu {
-  width: 100%;
+  width: 20rem;
   height: fit-content;
   padding: 0 10px;
   background-color: #fff3f3;
   letter-spacing: 0.75px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .aside-menu h4 {
@@ -61,7 +71,7 @@ input.search {
 .aside-menu .item {
   display: flex;
   align-items: center;
-  line-height: 8px;
+  line-height: 20px;
 }
 
 .aside-menu .item p {
@@ -79,13 +89,15 @@ input.search {
   cursor: pointer;
 }
 
+/* content item */
 .container {
-  display: flex;
+  display: grid;
+  grid-template-columns:repeat(2, 1fr) ;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px 0px;
 }
-
 
 .card-container {
   position: relative;
@@ -153,9 +165,13 @@ input.search {
 
 .container .load-more {
   display: flex;
+  grid-column: span 2;
+  width: 100%;
+  justify-content: center;
   align-items: center;
   gap: 15px;
   font-size: large;
+  padding-top: 30px;
   color: red;
   cursor: pointer;
 }
@@ -167,6 +183,7 @@ input.search {
 .container .whatsapp-icon {
   padding: 30px 0px 50px 100px;
 }
+
 /* all input styling */
 input[type="checkbox"] {
   outline: none;
